@@ -1,0 +1,12 @@
+CREATE DATABASE registro;
+USE registro;
+
+CREATE TABLE usuarios (
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (id),
+  nombre VARCHAR(75) NOT NULL,
+  apellido VARCHAR(120) NOT NULL,
+  dni VARCHAR(15) UNIQUE NOT NULL,
+  domicilio VARCHAR(225), NOT NULL,
+  lugar_nacimiento VARCHAR(225) NOT NULL
+);

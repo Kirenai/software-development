@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: #444;
+}
+
+.nav-container {
+    background-color: #333;
+    height: 80px;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LINK TITLE */
+.nav-title {
+    color: white;
+}
+
+.nav-title a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+}
+
+.nav-title a:hover {
+    color: #aaa;
+}
+
+/* LINK FACEBOOK */
+.nav-list ul {
+    list-style: none;
+}
+
+.nav-list ul li {
+    padding: 5px 10px;
+}
+
+.nav-list ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list ul li a:hover {
+    color: #aaa;
+}
+
+/* SECCIONES */
+.section h3 {
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+
+.sub-container {
+    height: 100%;
+    width: 50%;
+    margin: 10px;
+}
+
+.article {
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 100%;
+    padding: 50px;
+    background-color: #ffe;
+}
+
+.article {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-box-shadow: 4px 5px 35px 9px rgba(0,0,0,0.89); 
+    box-shadow: 4px 5px 35px 9px rgba(0,0,0,0.89);
+}
+
+.img {
+    justify-content: flex-end;
+}
+
+.footer {
+    height: 200px;
+}
+.footer .sub-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.footer p {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+    .article .text {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    .sub-container {
+        width: 95%;
+    }
+
+    .article {
+        display: block;
+    }
+    .article .text {
+        display: flex;
+        margin-right: 0;
+        justify-content: center;
+
+    }
+    .text span {
+        margin: 0 5px;
+        font-size: .8em;
+    }
+
+    .footer .sub-container {
+        display: block;
+        text-align: center;
+        
+    }
+}
+
+
