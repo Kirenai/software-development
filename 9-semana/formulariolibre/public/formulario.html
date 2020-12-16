@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">
+        <h1>Form</h1>
+      </div>
+      <form class="contact-form" method="POST" action="registro.php">
+        <div class="input-fields">
+          <input type="text" class="input" placeholder="Name" name="name" />
+          <input type="text" class="input" placeholder="Email" name="email" />
+          <input type="text" class="input" placeholder="Phone" name="phone" />
+          <input type="text" class="input" placeholder="Subject" name="subject" />
+        </div>
+        <div class="msg">
+          <textarea placeholder="Message" name="message"></textarea>
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
