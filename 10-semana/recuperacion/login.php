@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['usuario'])) {
+  header("Location: home.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +18,7 @@
       <div>
         <h1>Login</h1>
       </div>
-      <form class="form" action="auth/validate-user.php" method="POST">
+      <form class="form" action="index.php" method="POST">
         <div class="form__inputs__container">
           <label for="username">Username</label>
           <input type="text" name="username" id="username" required autofocus placeholder="Your username" />
@@ -21,7 +28,7 @@
           <input type="password" name="password" id="password" required placeholder="Your password" />
         </div>
         <div class="form__inputs__container">
-          <input type="submit" />
+          <input type="submit" name="login" />
         </div>
       </form>
       <div class="form__change">

@@ -1,6 +1,9 @@
 <?php
-session_name("loginUser");
 session_start();
+
+if (!isset($_SESSION['usuario'])) {
+  header('Location: login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,7 @@ session_start();
       <p>Usuario : <?php echo $_SESSION['usuario']; ?></p>
     </div>
     <div>
-      <p><a href="login.php">log out</a></p>
+      <p><a href="logout.php">log out</a></p>
     </div>
   </div>
 </body>

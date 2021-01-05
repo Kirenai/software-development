@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['usuario'])) {
+  header("Location: home.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +20,7 @@
     <div>
       <h1>Register</h1>
     </div>
-    <form class="form" action="auth/register-user.php" method="POST">
+    <form class="form" action="index.php" method="POST">
       <div class="form__inputs__container">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" required autofocus placeholder="Your username" />
@@ -31,7 +38,7 @@
         <input type="text" name="lastname" id="lastname" required placeholder="Your Last name" />
       </div>
       <div class="form__inputs__container">
-        <input type="submit" />
+        <input type="submit" name="register" />
       </div>
     </form>
     <div class="form__change">
