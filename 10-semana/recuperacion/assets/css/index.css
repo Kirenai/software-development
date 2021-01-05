@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.form__container h1 {
+  color: #807777;
+}
+
+.form {
+  padding: 40px;
+  width: 500px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color:#c9ccd1;
+}
+
+.form__inputs__container {
+  padding: 0px 20px;
+}
+
+.form__inputs__container label {
+  display: block;
+  color:#2f2f30;
+}
+.form__inputs__container input[type="text"],
+.form__inputs__container input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form__inputs__container input[type="submit"]{
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  background-color: #2233c7;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form__change a {
+  text-decoration: none;
+}
+
+.form__change span {
+  color: #425af5
+}
+.form__change span:hover {
+  color: #222ac7
+}
+
+.container {
+  text-align: center;
+}
+
+.container p a {
+  text-decoration: none;
+  color: #425af5
+}
+.container p a:hover {
+  color: #222ac7
+}
