@@ -1,6 +1,6 @@
 <?php
-session_start();
 $_SESSION['usuario'] = null;
+$_SESSION['invalid'] = null;
 
 class UserValidation
 {
@@ -37,12 +37,12 @@ class UserValidation
                         $_SESSION['validate'] = true;
                         header("Location: ./home.php");
                     } else {
-                        echo "contraseña incorrecta
-                            <br> <a href='./login.php'>Try again</a>";
+                        $_SESSION['invalid'] = "Contraseña invalida";
+                        header("Location: ./login.php");
                     }
                 } else {
-                    echo "usuario incorrecto
-                        <br> <a href='./login.php'>Try again</a>";
+                    $_SESSION['invalid'] = "Usuario invalido";
+                    header("Location: ./login.php");
                 }
             } else {
                 echo "Error al ejecutar la query";
@@ -52,36 +52,3 @@ class UserValidation
         }
     }
 }
-
-// new UserValidation();
-
-/* $username = $_POST['username'];
-$password = $_POST['password'];
-
-$connection = new Connection();
-$conn = $connection->getConnection();
-
-$sql = "SELECT * FROM users WHERE username = :username";
-
-$statement = $conn->prepare($sql);
-$statement->bindParam(":username", $username);
-
-try {
-    if ($statement->execute()) {
-        $row = $statement->fetch();
-        if (isset($row['username']) && $row['username'] === $username) {
-            if (isset($row['password']) && $row['password']  === $password) {
-                $_SESSION['usuario'] = $row['username'];
-                header("Location: ../home.php");
-            } else {
-                echo "contraseña incorrecta
-                    <br> <a href='../login.php'>Try again</a>";
-            }
-        } else {
-            echo "usuario incorrecto
-                <br> <a href='../login.php'>Try again</a>";
-        }
-    }
-} catch (\PDOException $ex) {
-    echo $ex->getMessage();
-} */
