@@ -20,6 +20,7 @@ class AuthModel extends Connection
             if ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $_SESSION["idlogged"] = $row["user_id"];
                 $_SESSION["isLogged"] = true;
+                $_SESSION["welcome"] = false;
                 return true;
             } else {
                 return false;

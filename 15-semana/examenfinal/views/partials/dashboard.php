@@ -17,10 +17,6 @@
                 Actualizar || Eliminar
                 <i class="fas fa-shopping-cart"></i>
             </a>
-            <a class="list-group-item list-group-item-action list-group-item-primary" href="">
-                Contactos
-                <i class="fas fa-id-card-alt"></i>
-            </a>
         </ul>
     </div>
 </div>

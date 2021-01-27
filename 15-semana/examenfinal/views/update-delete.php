@@ -44,20 +44,18 @@ $users = $userController->getAllUsers();
                 </div>
             </div>
         <?php } ?>
-        <div class="row gx-5 p-5 mx-auto">
+        <div class="d-flex mx-auto flex-wrap justify-content-center">
             <?php foreach ($users as $key1 => $value1) { ?>
-                <div class="col-sm-4 p-2">
-                    <div class="card bg-dark text-light border border-white">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <h5><?php echo $value1["username"]; ?></h5>
-                            </div>
-                            <p class="card-text"><?php echo $value1["email"]; ?></p>
-                            <p class="card-text"><?php echo $value1["first_name"] . " " . $value1["last_name"]; ?></p>
-                            <div class="text-center">
-                                <a href="add-update-user.php?id=<?php echo $value1["user_id"]; ?>" class="btn btn-primary mx-1">Update</a>
-                                <a href="../app/index.php?iddelete=<?php echo $value1["user_id"]; ?>" class="btn btn-danger mx-1">Delete</a>
-                            </div>
+                <div class="card bg-dark text-light border border-white m-2" style="height: 200px; width: 250px;">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5><?php echo $value1["username"]; ?></h5>
+                        </div>
+                        <p class="card-text badge bg-success"><?php echo $value1["email"]; ?></p><br>
+                        <p class="card-text badge bg-info text-dark"><?php echo $value1["first_name"] . " " . $value1["last_name"]; ?></p>
+                        <div class="text-center">
+                            <a href="add-update-user.php?id=<?php echo $value1["user_id"]; ?>" class="btn btn-primary mx-1">Update</a>
+                            <a href="../app/index.php?iddelete=<?php echo $value1["user_id"]; ?>" class="btn btn-danger mx-1">Delete</a>
                         </div>
                     </div>
                 </div>

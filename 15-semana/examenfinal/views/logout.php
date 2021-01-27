@@ -2,4 +2,5 @@
     session_start();
     session_destroy();
 
-    header("Location: login.php");
+    $_SESSION["welcome"] = true;
+    header("Location: index.php");

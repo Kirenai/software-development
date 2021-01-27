@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <!-- My CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Examen Final</title>
@@ -28,15 +32,24 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./home.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./profile.php">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./logout.php">Logout</a>
-                    </li>
+                    <?php if (isset($_SESSION["welcome"]) && $_SESSION["welcome"] === true) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./login.php">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./register.php">Sign up</a>
+                        </li>
+                    <?php } else { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./home.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profile.php">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./logout.php">Logout</a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
