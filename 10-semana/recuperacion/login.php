@@ -20,9 +20,9 @@ if (isset($_SESSION['usuario'])) {
   <div class="container">
     <?php if (isset($_SESSION['invalid'])) { ?>
       <div class="row justify-content-md-center">
-      <div class="col-md-4">
-        <div class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
-          <?php echo $_SESSION['invalid']; ?>
+        <div class="col-md-4">
+          <div class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+            <?php echo $_SESSION['invalid']; ?>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       </div>

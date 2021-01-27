@@ -1,0 +1,8 @@
+.i {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: 44px;
+  left: 5px;
+}
