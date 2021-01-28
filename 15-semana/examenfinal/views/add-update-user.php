@@ -5,6 +5,9 @@ if (!isset($_SESSION["isLogged"])) {
     header("Location: ../views/login.php");
 }
 
+$_SESSION["deleteall"] = false;
+
+
 include "../app/controller/UserController.php";
 
 if (isset($_REQUEST["id"])) {
@@ -103,9 +106,11 @@ if (isset($_REQUEST["id"])) {
                                 value="<?php echo $lastName; ?>"/>
                         </div>
                         <div class="mb-3">
-                            <input class="btn btn-primary form-control" 
+                            <button class="btn btn-primary form-control" 
                                 type="submit" 
-                                name="<?php echo $file ?>" />
+                                name="<?php echo $file ?>" 
+                                >Send.. <i class="fas fa-share-square"></i></button>
+                            
                         </div>
                     </form>
                 </div>

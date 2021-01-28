@@ -79,4 +79,19 @@ class UserModel extends Connection
             $this->closeConnection();
         }
     }
+
+    public function deleteAll()
+    {
+        try {
+            $sql = "DELETE FROM users";
+            $connection = $this->getConnection();
+            $connection->query($sql);
+            return true;
+        } catch (\PDOException $ex) {
+            return false;
+            echo $ex->getMessage();
+        } finally {
+            $this->closeConnection();
+        }
+    }
 }

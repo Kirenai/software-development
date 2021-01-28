@@ -3,6 +3,8 @@ session_start();
 if (!isset($_SESSION["isLogged"])) {
     header("Location: ../views/login.php");
 }
+$_SESSION["deleteall"] = false;
+
 ?>
 <?php include 'partials/header.php'; ?>
 
@@ -21,6 +23,9 @@ if (!isset($_SESSION["isLogged"])) {
                 </div>
             </div>
         <?php } ?>
+        <div class="text-light text-center mt-2">
+            <h2>Home</h2>
+        </div>
         <div class="card bg-dark p-6" style="height: 650px;">
             <div class="card m-4 mx-auto" style="width: 48rem;">
                 <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">

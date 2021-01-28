@@ -26,4 +26,10 @@ class UserController
         $userModel = new UserModel();
         return $userModel->delete($id);
     }
+
+    public function deleteAllUsers()
+    {
+        $userModel = new UserModel();
+        return $userModel->deleteAll();
+    }
 }

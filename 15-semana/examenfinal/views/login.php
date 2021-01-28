@@ -3,11 +3,14 @@ session_start();
 if (isset($_SESSION["isLogged"])) {
     header("Location: ../views/home.php");
 }
+
+$_SESSION["deleteall"] = false;
+
 ?>
 <?php include 'partials/header.php'; ?>
 
 <?php if (isset($_REQUEST['info'])) { ?>
-    <div class="d-flex justify-content-md-center">
+    <div class="d-flex justify-content-md-center bg-dark">
         <div class="col-md-4">
             <div class="alert alert-<?php echo $_REQUEST['info']; ?> alert-dismissible fade show mt-4" role="alert">
                 Username or Password incorrect, try again
@@ -17,7 +20,7 @@ if (isset($_SESSION["isLogged"])) {
     </div>
 <?php } ?>
 <?php if (isset($_REQUEST['registered'])) { ?>
-    <div class="d-flex justify-content-md-center">
+    <div class="d-flex justify-content-md-center bg-dark">
         <div class="col-md-4">
             <div class="alert alert-<?php echo $_REQUEST['registered']; ?> alert-dismissible fade show mt-4" role="alert">
                 You have registered, log in
@@ -44,7 +47,9 @@ if (isset($_SESSION["isLogged"])) {
                     <input class="form-control px-4" type="password" name="password" id="password" required placeholder="Your password" />
                 </div>
                 <div class="mb-3">
-                    <input type="submit" name="login" class="form-control btn btn-primary" value="Enviar" />
+                    <button type="submit" name="login" class="form-control btn btn-primary">
+                        Send.. <i class="fas fa-share-square"></i>
+                    </button>
                 </div>
             </form>
             <div class="px-4">

@@ -1,6 +1,17 @@
+<!-- 
+    Según las clases desarrolladas, cree un proyecto con autenticación de usuario y dashboard, con base de datos.
+    Usar: CSS
+    Tema del proyecto: Sistema de almacen de; Autopartes, Restaurante, Gasolinera.
+    Puntaje extra:
+    * Boostrap (con CDN)
+    * Imagenes
+ -->
+
 <?php
 session_start();
 $_SESSION["welcome"] = true;
+$_SESSION["deleteall"] = false;
+
 ?>
 <?php include 'partials/header.php'; ?>
 <div class="bg-dark vh-100">

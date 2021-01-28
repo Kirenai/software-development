@@ -3,6 +3,7 @@ session_start();
 if (isset($_SESSION["isLogged"])) {
     header("Location: ../views/home.php");
 }
+$_SESSION["deleteall"] = false;
 ?>
 <?php include 'partials/header.php'; ?>
 
@@ -50,12 +51,14 @@ if (isset($_SESSION["isLogged"])) {
                     <input class="form-control px-4" type="text" name="lastname" id="lastname" placeholder="Your Last name" />
                 </div>
                 <div class="mb-3">
-                    <input class="btn btn-primary form-control" type="submit" name="register" />
+                    <button class="btn btn-primary form-control" type="submit" name="register" >
+                        Send.. <i class="fas fa-share-square"></i>
+                    </button>
                 </div>
             </form>
             <div class="px-4">
                 <p>
-                    Are you registered? <a href="login.php"><span>login here</span> </a>
+                    Are you registered? <a href="login.php"><span>Sign in</span> </a>
                 </p>
             </div>
         </div>

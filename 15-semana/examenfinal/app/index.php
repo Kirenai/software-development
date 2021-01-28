@@ -9,6 +9,8 @@ include_once "model/UserModel.php";
 
 session_start();
 
+$_SESSION["deleteall"] = false;
+
 if (!isset($_SESSION["isLogged"])) {
     header("Location: ../views/login.php");
 }
@@ -84,6 +86,12 @@ if (isset($_REQUEST["iddelete"])) {
     } else {
         header("Location: ../views/update-delete.php?info=danger");
     }
+}
+
+if (isset($_REQUEST["deleteall"])) {
+    $userController = new UserController();
+    $userController->deleteAllUsers();
+    header("Location: ../views/update-delete.php?deleteall=success");
 }
 
 

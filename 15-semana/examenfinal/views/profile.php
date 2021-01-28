@@ -5,6 +5,9 @@ if (!isset($_SESSION["isLogged"])) {
     header("Location: ../views/login.php");
 }
 
+$_SESSION["deleteall"] = false;
+
+
 include "../app/controller/UserController.php";
 $idUserLogged = $_SESSION["idlogged"];
 $userController = new UserController();

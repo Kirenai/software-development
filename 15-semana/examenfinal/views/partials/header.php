@@ -1,4 +1,9 @@
 <?php
+if (isset($_SESSION["welcome"]) && $_SESSION["welcome"] === true) {
+    $mainPath = "./index.php";
+} else {
+    $mainPath = "./home.php";
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,7 +25,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom" style="z-index: 1;">
         <div class="container-fluid justify-content-between container">
-            <span class="navbar-brand">Sistema</span>
+            <a class="navbar-brand" href="<?php echo $mainPath ?>">Sistema</a>
             <button class="navbar-toggler ustify-content-end" 
                 type="button" 
                 data-bs-toggle="collapse" 
@@ -48,6 +53,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./logout.php">Logout</a>
+                        </li>
+                    <?php } ?>
+                    <?php if (isset($_SESSION["deleteall"]) && $_SESSION["deleteall"] === true) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#" id="deleteall">Delete All</a>
                         </li>
                     <?php } ?>
                 </ul>
